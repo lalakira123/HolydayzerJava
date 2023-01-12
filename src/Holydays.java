@@ -1,11 +1,11 @@
 public class Holydays {
-    Holyday[] holydays;
+    private Holyday[] holydays;
 
     public Holydays(Holyday[] holydays) {
       this.holydays = holydays;
     }
 
-    void isHoliday(String date) {
+    public void isHoliday(String date) {
       boolean hasHolyday = false;
 
       for (int i = 0; i < holydays.length; i++) {
@@ -22,12 +22,14 @@ public class Holydays {
       }
     }
 
-    void getHolydays() {
+    public Holyday[] getHolydays() {
         System.out.println("-----------Lista de Feriados----------");
 
         for (int i = 0; i < holydays.length; i++) {
           Holyday holyday = holydays[i];
           System.out.println(holyday.getName() + " => " + holyday.getDate());
         }
+
+        return holydays;
     }
 }
