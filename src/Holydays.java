@@ -12,7 +12,7 @@ public class Holydays {
         Holyday holyday = holydays[i];
 
         if ( holyday.getDate().equals(date) ) {
-          System.out.println("Feriado: " + holyday.getName() + " - " + holyday.getDate());
+          System.out.println("Existe Feriado: " + holyday.getName() + " - " + holyday.getDate());
           hasHolyday = true;
         } 
       }   
@@ -22,7 +22,12 @@ public class Holydays {
       }
     }
 
-    Holyday[] getHolydays() {
-        return holydays;
+    void getHolydays() {
+        System.out.println("-----------Lista de Feriados----------");
+
+        for (int i = 0; i < holydays.length; i++) {
+          Holyday holyday = holydays[i];
+          System.out.println(holyday.getName() + " => " + holyday.getDate());
+        }
     }
 }

@@ -16,7 +16,7 @@ public class App {
 
         Holydays listHolydays = new Holydays(holydays);
 
-        listHolydays.isHoliday("02/01/2023");
+        listHolydays.isHoliday("01/01/2023");
         listHolydays.getHolydays();
     }
 }
